@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>view data</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>FullName</td>
+            <td>Email</td>
+            <td>Password</td>
+            <td>Mobile</td>
+            <td>image</td>
+            <td>Action</td>
+            <td>Delete</td>
+
+        </tr>
+        {% if d %}
+        {% for i in d %}
+        <tr>
+
+            <td>{{i.userFullName}}</td>
+            <td>{{i.userEmail}}</td>
+            <td>{{i.userPassword}}</td>
+            <td>{{i.userMobile}} </td>
+            <td>{{i.userImage}}</td>
+
+            <td><a href="/viewimage2/?id1={{i.userEmail}}">picture</a> </td>
+            <td><a href="/delete1/?id={{i.userEmail}}">delete</a> </td>
+
+
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </table>
+</body>
+</html>

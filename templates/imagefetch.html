@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>update again</title>
+</head>
+<body>
+
+<form method="post" enctype='multipart/form-data'>
+    {% csrf_token %}
+    {% if v %}
+    <script type="text/javascript">
+        alert('successfully Registered');
+    </script>
+    {% endif %}
+
+
+
+     <label>Email</label>
+    <input type="email" name="email" id="email" value="{{v.userEmail}}">
+
+    <br>
+    <label>Name</label>
+    <input type="text" name="username" value="{{v.userFullName}}" >
+
+
+
+    <label>Password</label>
+    <input type="password" name="userpassword" value="{{v.userPassword}}">
+
+    <label>Contact Number</label>
+    <input type="text" name="usermobile" value="{{v.userMobile}}">
+
+     <label>Image</label>
+    <input type="file" name="userimage" value="{{v.userImage}}">
+
+    <img src="/media//{{v.userImage}}" name="img1" height="50px" width="50px">
+
+
+    <input type="submit" value="update data" >
+
+</form>
+
+</body>
+</html>

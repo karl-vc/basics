@@ -1,0 +1,378 @@
+
+DJANGO INTRODUCTION part...
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+django...... is framework
+lots of libraries are considered as framework...
+
+django....fetch data from server side..can also insert data to it....its in between database and ui ...website which fetch data from server or dta from ui..
+website database se communicate ni krti hai...like in static websites..
+
+django used responsible for the creation of dynamic websites
+
+ html can create static type website....php,jsp,ap.net,ruby can create dyanamic website...
+
+ .php to html ..it  makes rendering process..django is the only tech. that uses html..django database se dirctly utha k html me daal deta hai...
+ much secure from other languages...mean django..
+
+
+################-------------ARCHITECTURE---------------#####################
+ django usese loosly coupled architecture means..static is tightly bound mean once page is created than next tym to upgrde we must break the site and refresh whole website,,
+ and loosly means like hmari files agag alag jagah padi hui hai,...tb usko access krna easy hota like hr files ..means hr chiz ko sepratly alag jagh well placed rkhte like
+ js,css,txt ,html and all files are placed systematically ...and to communicated in them we use django to get acces to all these
+
+
+ .
+
+ MVC....model view controller..django follows MVT architecture...model view template..
+ MVC and MVT  is designed pattern which decide
+ model is database ...view means ui k sath link hai and controller is connected to logic
+ MVT...database view logic layer pe hai,...and template..ui pe based hai
+
+ model that used to communicate with database...
+ isme mean hr chiz k lie ek predefiend feature h jo specific kaam krega...means isme koi squal queries ka koi scene na ho...coz sql injections lag jayenge mean it can be hacked
+ ..\
+ in django it provides built in function ...to koi scene ni h we have to communicate with model no squal quris..
+ user interface in django is template....
+ template and model in dono ko communciqtion view krwayega in MVT..means all code is writtem in view..view database se be communicate krega...nd ui se se communicate krega
+
+ when we make request in django like from request to response that firSt we add url like insta.com in django all reQuest commess lands over url.py
+ ...and than..urls.py communicate with the view(logic)sepcific function me jaake  like this process is called routing...
+ like we add insta.com/index or anything than it goes to url than view....function ...index function at specific index....
+
+django funtion always provides http response....mean it can be as single h1 tag or can be a html page...like min or max..min h1 max html page..
+
+than funtion db me jb w=query pta lag jayegi ki model se koi query eturn krna hai..tb ye uske passs jayega and wapis return kr dega like funtion end pe....
+
+
+all the executions of django projects can be done by cmd ..and from that we made a folder at desktop
+
+django-admin startproject prject name
+
+us folder k ander manage.py project ko manage krne k kaam aata hai,,,
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+django working
+
+
+url.py file is used to project data or file to servers.py....vo file hai jaha project ki sbse pehli req yhi aati hai...
+
+
+defualt url of our website at local is
+127.0.0.1:8000
+..this is loop back ip..its our system ip..
+we can write local host or this ip in place of hostname for local
+
+
+if we add our website to port 80 tha
+127.0.0.1
+
+to run the file in django we add in cmd
+
+######################python manage.py runserver###########################
+
+...
+generally squal light 3 ko tb tk aayega jb tk connectivity ni kroge data k sath
+
+
+python manage.py runserver 80
+
+ to change port of network to 80 like path to get acces to the
+
+
+ funtion jo bhi hain jitna b code hm view .py pe likenge...model communicate krne k lie
+
+ jitne types ki app utne hi users
+ django-admin startapp firstapp(its the app name)
+ ctrl c is used to stop the running file or project
+
+seration of cencern for each and every ter....django me hr chiz seprate hai hr kisi ka data
+jitne users hai utni apps hongi
+
+
+app banane k baad..jo migrations wala folder hai vo record rkhta hao ki apne kab kitne table bnaye,,
+kab kya kia...sari chize
+
+
+admin.py file is for super user like thwy are us jo code likgh rha h..n super user banane k lie b command hoti hai
+model.py is used for database systems
+
+views.py ...is file me sara code n logic likhenge..
+
+
+now likw we hadve to make a filapge on webpage
+' means begning of code and $ means end of that
+
+
+#####################################################
+ek page chalana hai.. ek url funtion and page..ye 3 aad d krn hain ek page run krne k lie
+
+
+
+ab hm ek or page banayenge...toh uska page banane k lie hm ...directory add krenge..template naam ki..and than
+uspe right click krke usme html file add krke usme code krnege
+
+
+postmortom me jaake error padhna...agar..vo read ni kr paa rha than hme usko path provide krna hai ..setting.py k folder me jaake ..
+
+
+LIKE PEHLE EK DIRCTOR BANANAI MEAN EK VARIABLE K ANDE RUSKO PATH DENE BASE.DIR K NECHE THAN NECHE
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+day3  --->Mapping of physical files..
+
+--------------------------------------------------------------------------------------------------------------------------------
+like its from user end side or server side..
+
+for this we made a new directory in project names as assets...than in it we add css fir,than js dir and images dir...and one dir as named media in project folder..
+
+setting.py me jaake bottom me static se assests me change krenge physical files ki mapping yha se hoti hain
+after that add these lines after this
+STATICFILES_DIRS=[os.path.join(BASE_DIR,"assets")]
+
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,"media")
+
+user end se jo upload hoyega vhi kaarenge
+
+
+if we want to add image than we add in link assests/image/
+
+we can run django program from left bootom side named buttom terminal
+
+
+install pip install pymysql
+
+
+----------------------------------------------------------------------------------------------------------------------
+day 3...
+URL spliting................mtlb path de rhe hain,,
+
+when we create any app we have to add that app name in setting.py me installed apps k under usko add krna hai...
+
+dir me bahar wale ki priorty sbse high  hai and bech wale ka
+firstpp k ander   urls.py name ki file or template name ki dir banyenge..n jo b req aayegi vo pehle app k ander urls me jayengi n than
+usko redirect krenge..main project ki urls.py wali file pe....
+
+link krne k lie app k url.py me bs url add krneg..and main url.py me link krna h include krke and firstapp.url add krke
+
+now at output it comes under user/about..after adding localhost address
+
+
+now link pages by hyperlink..in the page we doo
+ <a href="/home/">Home</a>
+ in about page...
+
+
+
+ another method in firstapp url files we add name of that url as the url name...to call that url with name...
+
+ <a href="{% url 'firstapp:about' %}">About</a>
+ this is the method of linking a page with the help of python in an html page...as like {% anything in python code %} this is how we write py code in html
+
+
+ {{to print anything with python in any html page}}
+
+
+anything to send on page is in the form of dictionary for single data
+
+def about(request):
+
+    name="vishul"
+    return render(request,"about.html",{'n':name})
+
+    we add this to the view.py file mean pehle se add hoga bs usme add krna h extra
+    ------------
+
+django k ander {% if n %}and than we have tpo end the if fxn everty time after by writing
+{% endif %}
+
+this is only for the only thing that we want to send if we want to send more items or data to website than there is another method
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+day 4...
+---------------
+MASTER PAGE
+
+jiski layout same rhti hai...like uske menu bar same rhenge hr page me like ek webpage me 100 pages hain or unme 30 % same h tb master page help krta h like ek common page ek abr banao or
+ret of the pages bs copy paste krn ahai..
+
+best example is yahoo.com
+master page kbhi run nhi hoga...there can be more than one master pages...
+
+jp page sam erkhna h use same rkhna h or jisko change krna hai usme
+        {% block content %}
+
+
+        {% endblock %}
+
+there is nothing in between this...we just have to link it with this
+
+now we have to make another master page
+
+jo secure pages hian vo apps k ander honge..or unke url bhi vhi honge...n jo common pages hain vo main url me likh denge
+
+------------------------------
+
+database connectivity....
+host....user..password..and data...connectivity in this
+=------------------------------------------------------------------
+for super users
+we add
+
+#############################python manage.py createsuperuser####################################
+to create it as super user.....
+jo bhi app banao uske post me app lga do
+and the page u run at the admin page ur data means ur info is save as in heidi sql auth user file
+
+jitne bhi table banayenge uthne sb yha se banane ab mean jo run time pe khula.....n django me superuser ka admin page ye khud bna k deta hai
+
+------model creation
+---------------in firstapp open models.py filr
+custom table kaise banate hain..
+manauallly we dont delete the able from heidi sql
+
+jo bhi hmara table hoga uski ek class banegi
+imp..means table banana sekh jayenge
+
+99% case me hm AutoField ko primary key banayenge
+isActive=models.BooleanField(default=True)
+ye hr table k end me lagana e lagana hai...like it is used to block someones access or anything like that
+
+
+
+whenever we create a table or modify in python the command s
+python manage.py makemigrations firstapp(means name of your app)
+
+now table is created at firstapp ...migration ...than 0001 inital .py
+in which we can see that ho many table swe are given
+
+than run command python manage.py migrate
+than it shows table in ours table in heidi sql
+
+now to register it with superuser we add in admin.py file me link krenge means import kremge,,,,
+
+---------------------------------------------------------------------------------------------------------
+ab ek page bannaa h jiska data table me leke jana hai..mean jo table mysql pe banaya h
+
+model ko jo buhi data jayega form k throuh jana h...mean hme form se communicate krn hai..like vo ecide krega kn sa data kaha send
+krna hai...
+table bannae k lie model banana h or form banana hai...
+internalluy form nam ki class hoti h jisko inherit krenge...form se bat function krega...function viewa me yaayega...data fetch krne k lie function dirct doel se
+data utha skta h...in case of insertion update function goes through form than form goes to model
+..
+
+two ways auto or custom code
+..html se data view k pas kaise aayega..
+this is done by
+page pe function pe ja rha mean server pe jaa rha draa ...by get and post se daata send hota hai..
+get me url dikhna hai and post k through secure hota....ans unlimited data bhej skte ha
+
+
+
+
+##################################################################################
+kisi b type ki file apne server pe bhejni hai..toh apke form me <enctype="multipart/form-data'>
+
+
+fiddler ek aisa tool hai jisse dtaa inswert ho jata hai..securely..
+token is used for the secrity at the end ponit
+
+
+cross site refrence frogerry {% csrf_token %}
+this is used generat token
+if we do auto than we just dont have to make html form file
+
+--------------------------------------------------------------------------------------------------------------
+data fetch krn ek 3 method hain
+get().filter(),all()
+
+get()...it prives data on baseis of primary ke
+filter me jitn eb condition lga k output laa skte hain..alll se toh sare e mil jayegnfe records
+filter and all collection return krta hai,,so for loop se itertate krte hain... n get me sedha .lga k uska nam single record e ayega ek baar...
+
+fetch k lie ek page banana padega ..ek ek fxn ek url
+
+---------------------------------------------------------------
+create pasword as in the encripted form ..
+we cant see the users password bt we can change the password of the that user
+
+##################################
+from django.contrib.auth.hashers import make_password,check_password
+
+import this in to the views.py
+
+make password helps to make the encripted password in this ...
+
+
+
+update
+
+
+--------------------------------------------------------
+delete in database
+
+here we use redirtc method we dont need to do render ..coz we need not to make nother page we just has to deelete the data
+and
+def deletedata(request):
+    emailid= request.GET["id"]
+    data=SiteUser.objects.get(userEmail=emailid)
+    data.delete()
+    return redirect("/viewdata/")
+
+    in views .py
+
+
+
+
+QUERYSTRING....
+ek page se dusra page pe data send krne k lie hm pehle page se dusre page k function ko data send krte h jo fir dusre page me data show krwate hain
+
+ye question mark se banata h nd
+like href="/delete/?
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------
+form = ImagesForm(request.POST)
+        img1 = None
+        try:
+            if request.FILES["userimage"]:
+                my_file = request.FILES["userimage"]
+                fs = FileSystemStorage()
+                file_name = fs.save(my_file.name, my_file)
+                img1 = fs.url(file_name)
+                img1 = my_file
+        except:
+            pass
+
+
+
+
+
+
+            this helps to show data in media files..
+
+emailid = request.GET["id"]
+    data = Images.objects.get(userEmail=emailid)
+    if request.method == "POST":
+        u_name = request.POST["username"]
+        u_password = request.POST["userpassword"]
+        u_contact = request.POST["usermobile"]
+        u_image = request.POST["userimage"]
+        updatedata = SiteUser(userEmail=emailid, userFullName=u_name, userPassword=u_password, userMobile=u_contact,userImage=u_image)
+        updatedata.save(update_fields=["userFullName", "userPassword", "userMobile","userimage"])
+
+        return redirect("/viewdata/")
+
+    return render(request, "imagefetch.html", {'v': data})

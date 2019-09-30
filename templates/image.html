@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="post" enctype='multipart/form-data'>
+    {% csrf_token %}
+    {% if success %}
+    <script type="text/javascript">
+        alert('successfully Registered');
+    </script>
+    {% endif %}
+    <label>Name</label>
+    <input type="text" name=username>
+
+    <label>Email</label>
+    <input type="email" name="useremail">
+
+    <label>Password</label>
+    <input type="password" name="userpassword">
+
+    <label>image</label>
+    <input type="file" name="userimage" id="userimage">
+
+    <label>Contact Number</label>
+    <input type="text" name="usermobile">
+
+
+    <input type="submit" value="insert data" >
+
+
+</form>
+
+
+</body>
+</html>

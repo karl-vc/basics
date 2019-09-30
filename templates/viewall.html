@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>viewall</title>
+</head>
+<body>
+     <table>
+        <tr>
+            <td>FullName</td>
+            <td>Email</td>
+            <td>Password</td>
+            <td>Mobile</td>
+
+        </tr>
+        {% if d %}
+        {% for i in d %}
+        <tr>
+            <td>{{i.userFullName}}</td>
+            <td>{{i.userEmail}}</td>
+            <td>{{i.userPassword}}</td>
+            <td>{{i.userMobile}} </td>
+
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>update again</title>
+    <style>
+        p{
+        background-color:green;
+        font-size:18px;
+        text-align:center;
+        }
+    </style>
+</head>
+<body>
+
+<form method="post" enctype='multipart/form-data'>
+    {% csrf_token %}
+    {% if k %}
+    <script type="text/javascript">
+
+    </script>
+    {% endif %}
+
+
+
+     <label>Email</label>
+    <p>{{k.userEmail}}</p>
+
+
+    <br>
+    <label>Name</label>
+    <input type="text" name="username" value="{{k.userFullName}}" >
+
+
+
+    <label>Password</label>
+    <input type="password" name="userpassword" value="{{k.userPassword}}">
+
+    <label>Contact Number</label>
+    <input type="text" name="usermobile" value="{{k.userMobile}}">
+
+     <label>Image</label>
+    <input type="file" name="userimage" >
+
+    <img src="/media//{{k.userImage}}" name="img1" height="60px" width="80px">
+
+
+    <input type="submit" value="update data" >
+
+</form>
+
+</body>
+</html>

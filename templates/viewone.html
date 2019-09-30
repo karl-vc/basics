@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>view one</title>
+</head>
+<body>
+     <table>
+        <tr>
+            <td>FullName</td>
+            <td>Email</td>
+            <td>Password</td>
+            <td>Mobile</td>
+
+        </tr>
+        {% if d %}
+        <tr>
+            <td>{{data}}</td>
+            <td>{{i.userEmail}}</td>
+            <td>{{i.userPassword}}</td>
+            <td>{{i.userMobile}} </td>
+
+        </tr>
+
+        {% endif %}
+    </table>
+</body>
+</html>

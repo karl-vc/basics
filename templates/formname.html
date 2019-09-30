@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>formname</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+     {% if success1 %}
+    <script type="text/javascript">
+        alert('successfully Registered');
+    </script>
+    {% endif %}
+
+    <label>rolename</label>
+    <input type="text" name="rolename">
+
+    <input type="submit" value="insert value">
+
+</form>
+
+</body>
+</html>
